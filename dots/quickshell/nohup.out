@@ -1,0 +1,30 @@
+[32m  INFO[0m: Launching config: "/home/stan/.config/quickshell/default/shell.qml"
+[32m  INFO[0m: Shell ID: "9443168c4e0886ec08bd016e7b545395" Path ID "9443168c4e0886ec08bd016e7b545395"
+[32m  INFO[0m: Saving logs to "/run/user/1000/quickshell/by-id/7h3iggmbt/log.qslog"
+[32m  INFO[0m: QML tooling support enabled
+[33m  WARN[0m: $HYPRLAND_INSTANCE_SIGNATURE is unset. Cannot connect to hyprland.
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[77:13]: TypeError: Cannot read property 'height' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[83:13]: TypeError: Cannot read property 'width' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[91:13]: TypeError: Cannot read property 'height' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[90:13]: TypeError: Cannot read property 'width' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[77:13]: TypeError: Cannot read property 'height' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[83:13]: TypeError: Cannot read property 'width' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[91:13]: TypeError: Cannot read property 'height' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[90:13]: TypeError: Cannot read property 'width' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[38:-1]: TypeError: Cannot read property 'height' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[48:-1]: TypeError: Cannot read property 'height' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[57:-1]: TypeError: Cannot read property 'width' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[38:-1]: TypeError: Cannot read property 'height' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[48:-1]: TypeError: Cannot read property 'height' of null
+[33m  WARN[97m scene[0m: @modules/bar/Corners.qml[57:-1]: TypeError: Cannot read property 'width' of null
+[33m  WARN[97m scene[0m: @modules/overlays/VolumeOsd.qml[44:9]: Unable to assign [undefined] to bool
+[33m  WARN[97m scene[0m: @modules/overlays/VolumeOsd.qml[44:9]: Unable to assign [undefined] to bool
+[32m  INFO[0m: Configuration Loaded
+[33m  WARN[97m scene[0m: QML FileView at @config/Appearance.qml[36:5]: Read of /home/stan/.local/state/quickshell/by-shell/9443168c4e0886ec08bd016e7b545395/config.json failed: File does not exist.
+[33m  WARN[97m scene[0m: QML FileView at @services/AppSearch.qml[27:5]: Read of /home/stan/.local/state/quickshell/by-shell/9443168c4e0886ec08bd016e7b545395/app_usage.json failed: File does not exist.
+[34m DEBUG[97m qml[0m: App usage file not found, will create it on first launch.
+[32m  INFO[97m qml[0m: Detected Niri
+[33m  WARN[97m qt.qpa.wayland.textinput[0m: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Try to disable surface 0x7fdb1bdface0 with focusing surface 0x7fdb00fe96c0
+[33m  WARN[97m quickshell.io.socket[0m: Socket error for Socket(0x7fdacb3cc640) QLocalSocket::PeerClosedError
+[33m  WARN[97m quickshell.io.socket[0m: Socket error for Socket(0x7fdacb3cc500) QLocalSocket::PeerClosedError
+[33m  WARN[0m: The Wayland connection broke. Did the Wayland compositor die?

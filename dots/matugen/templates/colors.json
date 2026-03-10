@@ -1,0 +1,135 @@
+{
+  "colors": {
+    "light": {
+      "cPrimary": "{{ colors.primary.light.hex }}",
+      "cOnPrimary": "{{ colors.on_primary.light.hex }}",
+      "cPrimaryContainer": "{{ colors.primary_container.light.hex }}",
+      "cOnPrimaryContainer": "{{ colors.on_primary_container.light.hex }}",
+
+      "cPrimaryFixed": "{{ colors.primary_fixed.light.hex }}",
+      "cPrimaryFixedDim": "{{ colors.primary_fixed_dim.light.hex }}",
+      "cOnPrimaryFixed": "{{ colors.on_primary_fixed.light.hex }}",
+      "cOnPrimaryFixedVariant": "{{ colors.on_primary_fixed_variant.light.hex }}",
+
+      "cSecondary": "{{ colors.secondary.light.hex }}",
+      "cOnSecondary": "{{ colors.on_secondary.light.hex }}",
+      "cSecondaryContainer": "{{ colors.secondary_container.light.hex }}",
+      "cOnSecondaryContainer": "{{ colors.on_secondary_container.light.hex }}",
+
+      "cSecondaryFixed": "{{ colors.secondary_fixed.light.hex }}",
+      "cSecondaryFixedDim": "{{ colors.secondary_fixed_dim.light.hex }}",
+      "cOnSecondaryFixed": "{{ colors.on_secondary_fixed.light.hex }}",
+      "cOnSecondaryFixedVariant": "{{ colors.on_secondary_fixed_variant.light.hex }}",
+
+      "cTertiary": "{{ colors.tertiary.light.hex }}",
+      "cOnTertiary": "{{ colors.on_tertiary.light.hex }}",
+      "cTertiaryContainer": "{{ colors.tertiary_container.light.hex }}",
+      "cOnTertiaryContainer": "{{ colors.on_tertiary_container.light.hex }}",
+
+      "cTertiaryFixed": "{{ colors.tertiary_fixed.light.hex }}",
+      "cTertiaryFixedDim": "{{ colors.tertiary_fixed_dim.light.hex }}",
+      "cOnTertiaryFixed": "{{ colors.on_tertiary_fixed.light.hex }}",
+      "cOnTertiaryFixedVariant": "{{ colors.on_tertiary_fixed_variant.light.hex }}",
+
+      "cError": "{{ colors.error.light.hex }}",
+      "cOnError": "{{ colors.on_error.light.hex }}",
+      "cErrorContainer": "{{ colors.error_container.light.hex }}",
+      "cOnErrorContainer": "{{ colors.on_error_container.light.hex }}",
+
+      "cBackground": "{{ colors.background.light.hex }}",
+      "cOnBackground": "{{ colors.on_background.light.hex }}",
+
+      "cSurface": "{{ colors.surface.light.hex }}",
+      "cSurfaceDim": "{{ colors.surface_dim.light.hex }}",
+      "cSurfaceBright": "{{ colors.surface_bright.light.hex }}",
+
+      "cSurfaceContainerLowest": "{{ colors.surface_container_lowest.light.hex }}",
+      "cSurfaceContainerLow": "{{ colors.surface_container_low.light.hex }}",
+      "cSurfaceContainer": "{{ colors.surface_container.light.hex }}",
+      "cSurfaceContainerHigh": "{{ colors.surface_container_high.light.hex }}",
+      "cSurfaceContainerHighest": "{{ colors.surface_container_highest.light.hex }}",
+
+      "cOnSurface": "{{ colors.on_surface.light.hex }}",
+      "cSurfaceVariant": "{{ colors.surface_variant.light.hex }}",
+      "cOnSurfaceVariant": "{{ colors.on_surface_variant.light.hex }}",
+
+      "cOutline": "{{ colors.outline.light.hex }}",
+      "cOutlineVariant": "{{ colors.outline_variant.light.hex }}",
+
+      "cShadow": "{{ colors.shadow.light.hex }}",
+      "cScrim": "{{ colors.scrim.light.hex }}",
+
+      "cInverseSurface": "{{ colors.inverse_surface.light.hex }}",
+      "cInverseOnSurface": "{{ colors.inverse_on_surface.light.hex }}",
+      "cInversePrimary": "{{ colors.inverse_primary.light.hex }}",
+
+      "cSourceColor": "{{ colors.source_color.light.hex }}"
+    },
+
+    "dark": {
+      "cPrimary": "{{ colors.primary.dark.hex }}",
+      "cOnPrimary": "{{ colors.on_primary.dark.hex }}",
+      "cPrimaryContainer": "{{ colors.primary_container.dark.hex }}",
+      "cOnPrimaryContainer": "{{ colors.on_primary_container.dark.hex }}",
+
+      "cPrimaryFixed": "{{ colors.primary_fixed.dark.hex }}",
+      "cPrimaryFixedDim": "{{ colors.primary_fixed_dim.dark.hex }}",
+      "cOnPrimaryFixed": "{{ colors.on_primary_fixed.dark.hex }}",
+      "cOnPrimaryFixedVariant": "{{ colors.on_primary_fixed_variant.dark.hex }}",
+
+      "cSecondary": "{{ colors.secondary.dark.hex }}",
+      "cOnSecondary": "{{ colors.on_secondary.dark.hex }}",
+      "cSecondaryContainer": "{{ colors.secondary_container.dark.hex }}",
+      "cOnSecondaryContainer": "{{ colors.on_secondary_container.dark.hex }}",
+
+      "cSecondaryFixed": "{{ colors.secondary_fixed.dark.hex }}",
+      "cSecondaryFixedDim": "{{ colors.secondary_fixed_dim.dark.hex }}",
+      "cOnSecondaryFixed": "{{ colors.on_secondary_fixed.dark.hex }}",
+      "cOnSecondaryFixedVariant": "{{ colors.on_secondary_fixed_variant.dark.hex }}",
+
+      "cTertiary": "{{ colors.tertiary.dark.hex }}",
+      "cOnTertiary": "{{ colors.on_tertiary.dark.hex }}",
+      "cTertiaryContainer": "{{ colors.tertiary_container.dark.hex }}",
+      "cOnTertiaryContainer": "{{ colors.on_tertiary_container.dark.hex }}",
+
+      "cTertiaryFixed": "{{ colors.tertiary_fixed.dark.hex }}",
+      "cTertiaryFixedDim": "{{ colors.tertiary_fixed_dim.dark.hex }}",
+      "cOnTertiaryFixed": "{{ colors.on_tertiary_fixed.dark.hex }}",
+      "cOnTertiaryFixedVariant": "{{ colors.on_tertiary_fixed_variant.dark.hex }}",
+
+      "cError": "{{ colors.error.dark.hex }}",
+      "cOnError": "{{ colors.on_error.dark.hex }}",
+      "cErrorContainer": "{{ colors.error_container.dark.hex }}",
+      "cOnErrorContainer": "{{ colors.on_error_container.dark.hex }}",
+
+      "cBackground": "{{ colors.background.dark.hex }}",
+      "cOnBackground": "{{ colors.on_background.dark.hex }}",
+
+      "cSurface": "{{ colors.surface.dark.hex }}",
+      "cSurfaceDim": "{{ colors.surface_dim.dark.hex }}",
+      "cSurfaceBright": "{{ colors.surface_bright.dark.hex }}",
+
+      "cSurfaceContainerLowest": "{{ colors.surface_container_lowest.dark.hex }}",
+      "cSurfaceContainerLow": "{{ colors.surface_container_low.dark.hex }}",
+      "cSurfaceContainer": "{{ colors.surface_container.dark.hex }}",
+      "cSurfaceContainerHigh": "{{ colors.surface_container_high.dark.hex }}",
+      "cSurfaceContainerHighest": "{{ colors.surface_container_highest.dark.hex }}",
+
+      "cOnSurface": "{{ colors.on_surface.dark.hex }}",
+      "cSurfaceVariant": "{{ colors.surface_variant.dark.hex }}",
+      "cOnSurfaceVariant": "{{ colors.on_surface_variant.dark.hex }}",
+
+      "cOutline": "{{ colors.outline.dark.hex }}",
+      "cOutlineVariant": "{{ colors.outline_variant.dark.hex }}",
+
+      "cShadow": "{{ colors.shadow.dark.hex }}",
+      "cScrim": "{{ colors.scrim.dark.hex }}",
+
+      "cInverseSurface": "{{ colors.inverse_surface.dark.hex }}",
+      "cInverseOnSurface": "{{ colors.inverse_on_surface.dark.hex }}",
+      "cInversePrimary": "{{ colors.inverse_primary.dark.hex }}",
+
+      "cSourceColor": "{{ colors.source_color.dark.hex }}"
+    }
+  }
+}

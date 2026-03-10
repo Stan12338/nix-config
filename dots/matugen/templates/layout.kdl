@@ -1,0 +1,70 @@
+//auto generated with colors from matugen
+
+layout {
+    // Set gaps around windows in logical pixels.
+    gaps 8
+
+    // When to center a column when changing focus, options are:
+    // - "never", default behavior, focusing an off-screen column will keep at the left
+    //   or right edge of the screen.
+    // - "always", the focused column will always be centered.
+    // - "on-overflow", focusing a column will center it if it doesn't fit
+    //   together with the previously focused column.
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+    // If you leave the brackets empty, the windows themselves will decide their initial width.
+    // default-column-width {}
+
+    focus-ring {
+        // Uncomment this line to disable the focus ring.
+        off
+
+        width 4
+
+        active-color "{{ colors.primary.default.hex }}"
+
+        inactive-color "{{ colors.outline.default.hex }}"
+    }
+
+    border {
+        // off
+        // on
+
+        width 2
+        active-color "{{ colors.primary.default.hex }}"
+        inactive-color "{{ colors.outline.default.hex }}"
+
+        urgent-color "{{ colors.error.default.hex }}"
+    }
+
+    shadow {
+        // on
+        // draw-behind-window true
+        // Softness controls the shadow blur radius.
+        softness 30
+        // Spread expands the shadow.
+        spread 5
+        // Offset moves the shadow relative to the window.
+        offset x=0 y=0
+        // You can also change the shadow color and opacity.
+        color "{{ colors.shadow.default.hex }}"
+    }
+
+    struts {
+        // left 8
+        // right 8
+        // top 8
+        // bottom 8
+    }
+}
+
+overview {
+    backdrop-color "{{ colors.surface.default.hex }}"
+}
