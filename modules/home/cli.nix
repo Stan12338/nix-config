@@ -3,10 +3,10 @@
 {
 
   options = {
-    shell.enable = lib.mkEnableOption "enables shell/terminal configs and packages";
+    cli.enable = lib.mkEnableOption "enables shell/cli/terminal configs and packages";
   };
 
-  config = lib.mkIf config.shell.enable {
+  config = lib.mkIf config.cli.enable {
     programs.starship = {
         enable = true;
 

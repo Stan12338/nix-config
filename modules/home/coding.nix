@@ -32,7 +32,6 @@
       python3
       python3Packages.pynvim
       lua-language-server
-      claude-code
     ];
     programs.git = {
       enable = true;

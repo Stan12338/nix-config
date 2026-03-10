@@ -14,7 +14,7 @@
     ../../modules/home/misc.nix
     ../../modules/home/productivity.nix
     ../../modules/home/ricing.nix
-    ../../modules/home/shell.nix
+    ../../modules/home/cli.nix
     ../../modules/home/dotfiles.nix
   ];
 
@@ -25,7 +25,7 @@
   misc.enable = true;
   productivity.enable = true;
   ricing.enable = true;
-  shell.enable = true;
+  cli.enable = true;
   dotfiles.enable = true;
 
   programs.home-manager.enable = true;
