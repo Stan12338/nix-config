@@ -5,7 +5,7 @@ i finally got around to actually modularising my nix config, i was just using th
 first, clone the repo into your home directory
 '''
 cd ~/
-git clone https://github.com/Stan12338/nix-config.git
+git clone https://github.com/Stan12338/nix-config.git nixos
 '''
 then in your terminal run:
 
