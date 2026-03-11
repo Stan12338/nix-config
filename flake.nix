@@ -22,6 +22,7 @@
     matugen = {
       url = "github:/InioX/Matugen";
     };
+    nixcord.url = "github:FlameFlag/nixcord";
   };
 
   outputs =
@@ -33,6 +34,7 @@
       quickshell,
       spicetify-nix,
       matugen,
+      nixcord,
       ...
     }@inputs:
     let

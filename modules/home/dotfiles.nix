@@ -18,7 +18,7 @@
     xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/nvim";
     xdg.configFile."gtk-3.0".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/gtk-3.0";
     xdg.configFile."gtk-4.0".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/gtk-4.0";
-    xdg.configFile."vesktop".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/vesktop";
+    # xdg.configFile."vesktop/themes/midnight-discord.css".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/vesktop/themes/midnight-discord.css";
     xdg.configFile."rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/rofi";
     xdg.configFile."cava".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/cava";
     xdg.configFile."kitty".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/kitty";

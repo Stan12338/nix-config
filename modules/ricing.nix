@@ -20,6 +20,7 @@
       inputs.matugen.packages.${system}.default
       inputs.quickshell.packages.${pkgs.system}.default
       peaclock
+      adw-gtk3
     ];
   };
 

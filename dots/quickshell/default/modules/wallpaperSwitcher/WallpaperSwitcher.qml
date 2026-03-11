@@ -435,7 +435,7 @@ Scope {
 
                                         Timer {
                                             id: wallpaperChangeTimer
-                                            interval: 500
+                                            interval: 200
                                             repeat: false
                                             property var pendingUrl: null
                                             onTriggered: {
