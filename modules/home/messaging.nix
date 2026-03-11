@@ -13,9 +13,7 @@
       kdePackages.kdeconnect-kde
       localsend
     ];
-  };
-
-  programs.nixcord = {
+    programs.nixcord = {
       enable = true;
       vesktop.enable = true;
 
@@ -23,10 +21,13 @@
         frameless = true;
 
         plugins = {
-          hideAttachments.enable = true;
+          # hideAttachments.enable = true;
         };
       };
     };
+  };
+
+
 
 
 }

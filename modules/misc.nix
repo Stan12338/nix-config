@@ -26,8 +26,12 @@
       winetricks
       gsettings-desktop-schemas
       glib
+      sops
+      age
     ];
+
   };
+
 
 
 
