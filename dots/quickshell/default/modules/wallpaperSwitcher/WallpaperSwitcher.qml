@@ -115,7 +115,7 @@ Scope {
 
             function setWallpaper(url) {
                 var cleanPath = url.toString().replace("file://", "")
-                Appearance.setWallpaper(cleanPath)
+                Quickshell.execDetached(["matugen", "image", cleanPath, "-m", Appearance.isDark ? "dark" : "light", "-t", Appearance.scheme, "--source-color-index", 0])
             }
 
             function closePanel() {

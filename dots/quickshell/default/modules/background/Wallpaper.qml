@@ -42,7 +42,7 @@ Scope {
         function set(file: string) {
             fileUrl = file
             updateFileType()
-            Appearance.setWallpaperFromMatugen(file)
+            Appearance.setWallpaper(file)
         }
     }
 

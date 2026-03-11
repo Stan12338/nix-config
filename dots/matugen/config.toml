@@ -1,5 +1,5 @@
 [config.wallpaper]
-command = "qs ipc call wallpaper set $HOME/{{image}}"
+command = "qs ipc call wallpaper set {{image}}"
 set = true
 
 [templates.hyprland]

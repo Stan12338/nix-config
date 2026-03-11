@@ -141,7 +141,8 @@ Singleton {
         matugenProcess.command = [
             "matugen", "image", imagePath,
             "-m", mode,
-            "-t", schemeName
+            "-t", schemeName,
+            "--source-color-index", 0
         ]
         matugenProcess.running = true
         return true
@@ -175,7 +176,6 @@ Singleton {
         }
     }
 
-    // for when called not from ipc
     function setWallpaper(path) {
         if (root.wallpaper === path) {
             return
@@ -189,15 +189,6 @@ Singleton {
             saveConfig()
         }
 
-        if (path && !isFromMatugenIPC) {
-            runMatugen(path, root.isDark ? "dark" : "light", root.scheme)
-        }
     }
 
-    // when the qs ipc is called from matugen or somewhere else idk
-    function setWallpaperFromMatugen(path) {
-        isFromMatugenIPC = true
-        setWallpaper(path)
-        isFromMatugenIPC = false
-    }
 }
