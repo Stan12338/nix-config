@@ -13,6 +13,8 @@
       ./../../modules/coding.nix
       ./../../modules/nvidia.nix
       ./../../modules/ricing.nix
+      ./../../modules/flatpak.nix
+      ./../../modules/misc.nix
     ];
 
     networking.hostName = "stan-laptop";
@@ -20,6 +22,10 @@
     coding.enable = true;
     ricing.enable = true;
     misc.enable = true;
+    flatpak = {
+      enable = true;
+      gaming.enable = true;
+    };
 
     users.users.stan = {
       isNormalUser = true;

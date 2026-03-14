@@ -28,9 +28,9 @@ layout {
 
         width 4
 
-        active-color "#c1cd7d"
+        active-color "#ccbeff"
 
-        inactive-color "#919283"
+        inactive-color "#938f99"
     }
 
     border {
@@ -38,8 +38,8 @@ layout {
         // on
 
         width 2
-        active-color "#c1cd7d"
-        inactive-color "#919283"
+        active-color "#ccbeff"
+        inactive-color "#938f99"
 
         urgent-color "#ffb4ab"
     }
@@ -66,5 +66,5 @@ layout {
 }
 
 overview {
-    backdrop-color "#13140d"
+    backdrop-color "#141318"
 }
