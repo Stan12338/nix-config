@@ -23,6 +23,7 @@
       url = "github:/InioX/Matugen";
     };
     nixcord.url = "github:FlameFlag/nixcord";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
@@ -35,6 +36,7 @@
       spicetify-nix,
       matugen,
       nixcord,
+      nix-flatpak,
       ...
     }@inputs:
     let
@@ -50,6 +52,7 @@
           modules = [
             ./hosts/stan-pc/configuration.nix
             home-manager.nixosModules.home-manager
+            nix-flatpak.nixosModules.nix-flatpak
             {
               home-manager = {
                 useGlobalPkgs = true;
@@ -68,6 +71,7 @@
           modules = [
             ./hosts/stan-laptop/configuration.nix
             home-manager.nixosModules.home-manager
+            nix-flatpak.nixosModules.nix-flatpak
             {
               home-manager = {
                 useGlobalPkgs = true;

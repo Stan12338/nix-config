@@ -33,6 +33,8 @@
       xwayland
       inputs.zen-browser.packages.${pkgs.system}.default
       nemo-with-extensions
+      xclip
+      wtype
 
     ];
     services.xserver.enable = true;
@@ -75,6 +77,7 @@
 
     nixpkgs.config.allowUnfree = true;
     hardware.bluetooth.enable = true;
+    zramSwap.enable = true;
 
     environment.sessionVariables = {
       NIXOS_OZONE_WL = "1";

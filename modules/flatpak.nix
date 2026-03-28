@@ -2,19 +2,19 @@
 
 {
   options = {
-    flatpak.enable = lib.mkEnableOption "enables flatpak packages";
-    gaming.enable = lib.mkEnableOption "enable gaming flatpaks";
+    flatpakPackages.enable = lib.mkEnableOption "enables flatpak packages";
   };
 
-  config = lib.mkMerge [
-      (lib.mkIf config.flatpak.enable {
-        services.flatpak.enable = true;
-      })
-
-      (lib.mkIf config.flatpak.gaming.enable {
-        services.flatpak.packages = [
-          "org.vinegarhq.Sober"
-        ];
-      })
+  config = lib.mkIf config.flatpakPackages.enable {
+    services.flatpak.enable = true;
+    services.flatpak.update.onActivation = true;
+    services.flatpak.update.auto = {
+      enable = true;
+      onCalendar = "weekly";
+    };
+    services.flatpak.packages = [
+      "org.vinegarhq.Sober"
+      "com.github.tchx84.Flatseal"
     ];
+  };
 }

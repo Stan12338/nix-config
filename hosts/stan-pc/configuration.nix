@@ -23,9 +23,8 @@
   coding.enable = true;
   ricing.enable = true;
   misc.enable = true;
-  flatpak = {
+  flatpakPackages = {
     enable = true;
-    gaming.enable = true;
   };
 
   users.users.stan = {
