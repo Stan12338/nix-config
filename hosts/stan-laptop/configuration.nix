@@ -25,6 +25,10 @@
     flatpakPackages = {
       enable = true;
     };
+    nix.settings = {
+      max-jobs = 6;
+      cores = 6;
+    };
 
     users.users.stan = {
       isNormalUser = true;
