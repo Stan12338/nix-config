@@ -57,7 +57,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.stan = import ./users/stan/home.nix;
+                users.stan = import ./hosts/stan-pc/home.nix;
                 backupFileExtension = "backup";
               };
 
@@ -76,7 +76,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.stan = import ./users/stan/home.nix;
+                users.stan = import ./hosts/stan-laptop/home.nix;
                 backupFileExtension = "backup";
               };
 
