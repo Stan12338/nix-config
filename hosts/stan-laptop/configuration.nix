@@ -11,7 +11,6 @@
       ./../../modules/base.nix
       ./../../modules/fonts.nix
       ./../../modules/coding.nix
-      ./../../modules/nvidia.nix
       ./../../modules/ricing.nix
       ./../../modules/flatpak.nix
       ./../../modules/misc.nix
@@ -33,6 +32,10 @@
     users.users.stan = {
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" ];
+    };
+
+    environment.sessionVariables = {
+      WLR_NO_HARDWARE_CURSORS = "1";
     };
 
     system.stateVersion = "25.11";
