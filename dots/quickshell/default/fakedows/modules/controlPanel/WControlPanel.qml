@@ -6,7 +6,7 @@ import Quickshell.Io
 import Quickshell.Wayland
 import Quickshell.Hyprland
 import qs.config
-import qs.widgets
+import qs.widgets.fakedows
 import qs.services
 import qs.services.niri
 import Quickshell.Services.Pipewire
