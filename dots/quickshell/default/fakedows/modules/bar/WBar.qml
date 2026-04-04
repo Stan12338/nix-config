@@ -542,19 +542,13 @@ Scope {
                                         anchors.bottomMargin: 12
                                         anchors.leftMargin: 8
                                         anchors.rightMargin:8
+                                        spacing: Battery.percentage ? 8 : 16
                                         Item {
                                             Layout.fillWidth: true
                                             Layout.fillHeight: true
                                             Image {
                                                 anchors.centerIn: parent
                                                 source: "../../images/wifi-full.png"
-                                            }
-                                        }
-                                        Loader {
-                                            active: !Battery.percentage
-                                            Item {
-                                                Layout.fillWidth: true
-                                                Layout.fillHeight: true
                                             }
                                         }
                                         Item {
@@ -567,9 +561,10 @@ Scope {
                                         }
                                         Loader {
                                             active: Battery.percentage
+                                            Layout.fillWidth: true
+                                            Layout.fillHeight: true
                                             Item {
-                                                Layout.fillWidth: true
-                                                Layout.fillHeight: true
+                                                anchors.fill: parent
                                                 Image {
                                                     anchors.centerIn: parent
                                                     source: "../../images/battery/"  + Battery.capacity + ".png"
