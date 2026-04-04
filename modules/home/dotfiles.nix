@@ -44,11 +44,7 @@
       xdg.configFile."niri".source = lib.mkForce
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/laptop/niri");
       xdg.configFile."hypr".source = lib.mkForce
-<<<<<<< HEAD
-        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/fakedows/hypr");
-=======
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/laptop/hypr");
->>>>>>> 066ab396fe46577bf1a99af2ea775c9109903d18
     })
   ]);
 }
