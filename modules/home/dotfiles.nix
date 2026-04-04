@@ -38,9 +38,9 @@
     }
     (lib.mkIf config.dotfiles.laptop.enable {
       xdg.configFile."niri".source = lib.mkForce
-        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/fakedows/niri");
+        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/laptop/niri");
       xdg.configFile."hypr".source = lib.mkForce
-        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/fakedows/hypr");
+        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/laptop/hypr");
     })
   ]);
 }
