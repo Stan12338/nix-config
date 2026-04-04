@@ -4,11 +4,7 @@
 
   options.dotfiles = {
     enable = lib.mkEnableOption "symlinks dotfiles";
-<<<<<<< HEAD
     laptop.enable = lib.mkEnableOption "enable laptop dots";
-=======
-    laptop.enable = lib.mkEnableOption "enable fake windows rice";
->>>>>>> 066ab396fe46577bf1a99af2ea775c9109903d18
   };
 
   config = lib.mkIf config.dotfiles.enable (lib.mkMerge [
