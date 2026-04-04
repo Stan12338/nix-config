@@ -4,7 +4,7 @@
 
   options.dotfiles = {
     enable = lib.mkEnableOption "symlinks dotfiles";
-    fakedows.enable = lib.mkEnableOption "enable fake windows rice";
+    laptop.enable = lib.mkEnableOption "enable laptop dots";
   };
 
   config = lib.mkIf config.dotfiles.enable (lib.mkMerge [
@@ -36,13 +36,11 @@
       xdg.configFile."zed".source = lib.mkDefault
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/zed");
     }
-    (lib.mkIf config.dotfiles.fakedows.enable {
+    (lib.mkIf config.dotfiles.laptop.enable {
       xdg.configFile."niri".source = lib.mkForce
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/fakedows/niri");
       xdg.configFile."hypr".source = lib.mkForce
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/fakedows/hypr");
-      xdg.configFile."quickshell/default".source = lib.mkForce
-        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/fakedows/quickshell/default");
     })
   ]);
 }

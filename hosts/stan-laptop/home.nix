@@ -5,5 +5,5 @@
     ./../../users/stan/default.nix
   ];
 
-  dotfiles.fakedows.enable = true;
+  dotfiles.laptop.enable = true;
 }
