@@ -4,10 +4,16 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 8
 
-    // When to center a column when changing focus, options are: - "never", default behavior, focusing an off-screen column will keep at the left or right edge of the screen. - "always", the focused column will always be centered.
-    // - "on-overflow", focusing a column will center it if it doesn't fit together with the previously focused column.
-    center-focused-column "never" 
-    preset-column-widths { proportion 0.33333
+    // When to center a column when changing focus, options are:
+    // - "never", default behavior, focusing an off-screen column will keep at the left
+    //   or right edge of the screen.
+    // - "always", the focused column will always be centered.
+    // - "on-overflow", focusing a column will center it if it doesn't fit
+    //   together with the previously focused column.
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
         proportion 0.5
         proportion 0.66667
     }
@@ -22,9 +28,9 @@ layout {
 
         width 4
 
-        active-color "#c3c0ff"
+        active-color "#8ecff2"
 
-        inactive-color "#928f9a"
+        inactive-color "#8a9297"
     }
 
     border {
@@ -32,8 +38,8 @@ layout {
         // on
 
         width 2
-        active-color "#c3c0ff"
-        inactive-color "#928f9a"
+        active-color "#8ecff2"
+        inactive-color "#8a9297"
 
         urgent-color "#ffb4ab"
     }
@@ -60,5 +66,5 @@ layout {
 }
 
 overview {
-    backdrop-color "#131318"
+    backdrop-color "#0f1417"
 }
