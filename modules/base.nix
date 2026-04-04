@@ -35,6 +35,7 @@
       nemo-with-extensions
       xclip
       wtype
+      libnotify
 
     ];
     services.xserver.enable = true;

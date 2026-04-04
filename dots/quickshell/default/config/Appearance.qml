@@ -7,6 +7,8 @@ Singleton {
     id: root
 
     property bool barBgEnabled: true
+    property bool silent: false
+    property bool fakedows: false
     property string barType: "default"
     property bool barEdges: barBgEnabled && barType === "default"
     property bool isDark: true
@@ -31,6 +33,15 @@ Singleton {
         onTriggered: {
             configFileView.writeAdapter()
         }
+    }
+
+    IpcHandler {
+        id: ipc
+        target: "config"
+        function toggleFakedows() {
+            root.fakedows = !root.fakedows
+        }
+
     }
 
     FileView {
@@ -62,6 +73,14 @@ Singleton {
                 root.barBgEnabled = configJsonAdapter.config.barBgEnabled
             }
 
+            if (configJsonAdapter.config.fakedows !== undefined) {
+                root.fakedows = configJsonAdapter.config.fakedows
+            }
+
+            if (configJsonAdapter.config.silent !== undefined) {
+                root.silent = configJsonAdapter.config.silent
+            }
+
             root.configDataLoaded = true
             isLoadingFromFile = false
         }
@@ -79,7 +98,9 @@ Singleton {
                 isDark: true,
                 scheme: "scheme-tonal-spot",
                 barType: "floating",
-                barBgEnabled: true
+                barBgEnabled: true,
+                fakedows: false,
+                silent: false
             })
         }
     }
@@ -90,6 +111,8 @@ Singleton {
     onSchemeChanged: if (readyToSave) saveConfig()
     onBarTypeChanged: if (readyToSave) saveConfig()
     onBarBgEnabledChanged: if (readyToSave) saveConfig()
+    onFakedowsChanged: if (readyToSave) saveConfig()
+    onSilentChanged: if (readyToSave) saveConfig()
 
     onWallpaperChanged: {
         if (readyToSave && !isFromMatugenIPC && root.wallpaper !== configJsonAdapter.config.wallpaper) {
@@ -103,7 +126,9 @@ Singleton {
             isDark: root.isDark,
             scheme: root.scheme,
             barType: root.barType,
-            barBgEnabled: root.barBgEnabled
+            barBgEnabled: root.barBgEnabled,
+            fakedows: root.fakedows,
+            silent: root.silent
         }
 
         configWriteTimer.restart()

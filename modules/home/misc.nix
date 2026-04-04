@@ -11,7 +11,7 @@
       grimblast
       slurp
       grim
-      protonvpn-gui
+      proton-vpn
       thunar
       brave
     ];

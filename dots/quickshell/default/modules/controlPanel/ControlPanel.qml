@@ -171,7 +171,7 @@ Scope {
                             // anchors.margins: 20
                             anchors.leftMargin: Appearance.barEdges ? 20 : 16
                             anchors.rightMargin: Appearance.barEdges ? 0 : 16
-                            anchors.bottomMargin: Appearance.barEdges ? 20 : 16
+                            anchors.bottomMargin: Appearance.barEdges ? 32 : 4
                             // anchors.topMargin: 16
 
                             opacity: (sharedState.isOpen && shouldShow) ? 1 : 0
