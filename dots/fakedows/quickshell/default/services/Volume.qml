@@ -12,7 +12,7 @@ Singleton {
 
     // === Config ===
     property real minVolume: 0.0
-    property real maxVolume: 1.25
+    property real maxVolume: 1.0
 
     // === Default Nodes ===
     readonly property PwNode defaultSpeaker: Pipewire.defaultAudioSink

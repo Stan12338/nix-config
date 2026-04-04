@@ -6,7 +6,7 @@ import QtMultimedia
 
 Scope {
     id: root
-    property var fileUrl: "/home/stan/Pictures/Wallpapers/winref10.png"
+    property var fileUrl: "/home/stan/Pictures/Wallpapers/windows.jpg"
     property bool isVideo: false
 
     function updateFileType() {
