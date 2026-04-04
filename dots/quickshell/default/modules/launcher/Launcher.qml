@@ -51,6 +51,7 @@ Scope {
         }
 
         function toggle_launcher() {
+
             if (sharedState.mode === "launcher" && sharedState.isOpen) {
                 close()
             } else {

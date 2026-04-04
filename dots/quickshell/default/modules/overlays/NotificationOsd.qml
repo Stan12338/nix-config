@@ -57,6 +57,9 @@ Variants {
             running: true
             repeat: true
             onTriggered: {
+                if (Appearance.silent) {
+                    return
+                }
                 const currentPopups = NotifServer.popups
                 const currentIds = new Set()
 

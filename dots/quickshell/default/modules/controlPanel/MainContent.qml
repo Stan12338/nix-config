@@ -15,7 +15,7 @@ Item {
 
     ColumnLayout {
         anchors.fill: parent
-        anchors.bottomMargin: 12
+        // anchors.bottomMargin: 12
         spacing: 16
         ColumnLayout {
             // if youre wondering why this is a grid layout instead of a row layout its because
@@ -342,7 +342,7 @@ Item {
                         onMoved: {
                             if (Pipewire.defaultAudioSink)
                                 Pipewire.defaultAudioSink.audio.volume = value;
-                            volumeValue.text = Math.round(value * 100) + "%";
+                            // volumeValue.text = Math.round(value * 100) + "%";
                         }
                     }
 
@@ -392,6 +392,97 @@ Item {
 
 
         }
+
+        RowLayout {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 120
+            spacing: 0
+
+            ColumnLayout {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Item {
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.fillWidth: true
+                    Layout.bottomMargin: 8
+                    StyledText {
+                        text: " CPU"
+                        color: "white"
+                        anchors.centerIn: parent
+                        font.pixelSize: 16
+                    }
+                }
+
+                CircleSlider {
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                    size: 100
+                    value: (ResourceUsage.maxAvailableCpuString.replace("GHz", "").trim() * ResourceUsage.cpuUsage) / ResourceUsage.maxAvailableCpuString.replace("GHz", "").trim()
+                    centerText: Math.round((ResourceUsage.maxAvailableCpuString.replace("GHz", "").trim() * ResourceUsage.cpuUsage) * 10) / 10 + " GHz" //Math.round(ResourceUsage.cpuUsage * 100) + "%"
+                    subText: "of " + ResourceUsage.maxAvailableCpuString
+                }
+            }
+
+
+
+
+            Item { Layout.fillWidth: true }
+
+            ColumnLayout {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Item {
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.fillWidth: true
+                    Layout.bottomMargin: 8
+                    StyledText {
+                        text: " RAM"
+                        color: "white"
+                        anchors.centerIn: parent
+                        font.pixelSize: 16
+                    }
+                }
+
+                CircleSlider {
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                    size: 100
+                    value: ResourceUsage.memoryUsedPercentage
+                    centerText: ResourceUsage.kbToGbString(ResourceUsage.memoryUsed)
+                    subText: "of " + ResourceUsage.kbToGbString(ResourceUsage.memoryTotal)
+                }
+            }
+
+
+
+
+            Item { Layout.fillWidth: true }
+
+            ColumnLayout {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Item {
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.fillWidth: true
+                    Layout.bottomMargin: 8
+                    StyledText {
+                        anchors.centerIn: parent
+                        text: "Temp"
+                        color: "white"
+                        font.pixelSize: 16
+                    }
+                }
+
+                CircleSlider {
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                    size: 100
+                    value: ResourceUsage.cpuTemp / 100
+                    centerText: ResourceUsage.cpuTemp + "°C"
+                    subText: "CPU temp"
+                }
+            }
+
+
+        }
+        Item {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
         RowLayout {
             id: quickActions
             Layout.fillWidth: true
@@ -425,10 +516,6 @@ Item {
                     type: "windows"
                 }
             }
-        }
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
         }
 
     }
