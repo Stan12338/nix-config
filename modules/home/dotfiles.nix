@@ -34,7 +34,7 @@
       xdg.configFile."kitty".source = lib.mkDefault
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/kitty");
       xdg.configFile."zed".source = lib.mkDefault
-        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/zed");
+        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/zed");c
     }
     (lib.mkIf config.dotfiles.fakedows.enable {
       xdg.configFile."niri".source = lib.mkForce
