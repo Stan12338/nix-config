@@ -26,6 +26,10 @@ Singleton {
     property bool isLoadingFromFile: false
     property bool isFromMatugenIPC: false
 
+    // fake windows stuff
+    property bool controlPanelOpened: false
+    property bool startMenuOpened: false
+
     Timer {
         id: configWriteTimer
         interval: 100
