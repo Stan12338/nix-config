@@ -542,7 +542,7 @@ Scope {
                                         anchors.bottomMargin: 12
                                         anchors.leftMargin: 8
                                         anchors.rightMargin:8
-                                        spacing: Battery.percentage ? 8 : 16
+                                        spacing: 0
                                         Item {
                                             Layout.fillWidth: true
                                             Layout.fillHeight: true
@@ -552,6 +552,10 @@ Scope {
                                             }
                                         }
                                         Item {
+                                            Layout.fillHeight: true
+                                            implicitWidth: 8
+                                        }
+                                        Item {
                                             Layout.fillWidth: true
                                             Layout.fillHeight: true
                                             Image {
@@ -559,9 +563,13 @@ Scope {
                                                 source: "../../images/sound.png"
                                             }
                                         }
+                                        Item {
+                                            Layout.fillHeight: true
+                                            implicitWidth: Battery.percentage ? 8 : 0
+                                        }
                                         Loader {
                                             active: Battery.percentage
-                                            Layout.fillWidth: true
+                                            Layout.fillWidth: Battery.percentage
                                             Layout.fillHeight: true
                                             Item {
                                                 anchors.fill: parent
