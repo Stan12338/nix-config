@@ -170,7 +170,7 @@ Variants {
 
                                 property bool removing: false
                                 property bool hasAppeared: false
-                                property real slideOffset: Appearance.barEdges ? 400 : 0
+                                property real slideOffset: 400
 
                                 Component.onCompleted: {
                                     hasAppeared = true
@@ -188,10 +188,13 @@ Variants {
                                 }
 
                                 function startDismissAnimation() {
-                                    if (removing || slideOffset > 0) {
+                                    if (removing) {
                                         return
                                     }
-                                    slideOffset = Appearance.barEdges ? 400 : 0
+                                    // If not yet at target position, animate back to 400
+                                    if (slideOffset !== 400) {
+                                        slideOffset = 400
+                                    }
                                     collapseTimer.start()
                                 }
                                 Timer {
@@ -219,7 +222,7 @@ Variants {
                                 }
 
                                 Behavior on slideOffset {
-                                    enabled: hasAppeared && Appearance.barEdges
+                                    enabled: hasAppeared
                                     NumberAnimation {
                                         duration: 400
                                         easing.type: Easing.OutCubic
@@ -239,7 +242,7 @@ Variants {
 
                                     width: parent.width
                                     height: contentColumn.implicitHeight + 24
-                                    x: Appearance.barEdges ? parent.slideOffset : 0
+                                    x: parent.slideOffset
 
                                     color: Appearance.colors.cSurfaceContainer
                                     radius: 12

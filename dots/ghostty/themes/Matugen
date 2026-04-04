@@ -1,7 +1,7 @@
-background = #191113
-foreground = #efdee0
-cursor-color = #efdee0
-cursor-text = #d6c2c4
-selection-background = #e4bdc3
-selection-foreground = #43292f
-palette = 4 = #ffb1c1
+background = #171216
+foreground = #ebdfe6
+cursor-color = #ebdfe6
+cursor-text = #d1c3cc
+selection-background = #d9bfd3
+selection-foreground = #3c2b3a
+palette = 4 = #efb4e8
