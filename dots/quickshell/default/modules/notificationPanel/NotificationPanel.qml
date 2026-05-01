@@ -22,9 +22,8 @@ Scope {
 
     IpcHandler {
         id: ipc
-        target: "controlpanel"
+        target: "notifpanel"
         function toggle() {
-            Quickshell.execDetached(["qs", "ipc", "call", "mprispanel", "close"])
             if (!sharedState.isOpen) {
                 if (Compositor.compositor === "hyprland") {
                     sharedState.openedOnMonitor = Hyprland.focusedMonitor?.name ?? ""
@@ -38,7 +37,6 @@ Scope {
             sharedState.isOpen = !sharedState.isOpen
         }
         function open() {
-            Quickshell.execDetached(["qs", "ipc", "call", "mprispanel", "close"])
             if (!sharedState.isOpen) {
                 if (Compositor.compositor === "hyprland") {
                     sharedState.openedOnMonitor = Hyprland.focusedMonitor?.name ?? ""
@@ -69,7 +67,7 @@ Scope {
                 bottom: true
             }
             margins.top: Appearance.barEdges ? 40 : 48
-            margins.right: Appearance.barEdges ? 12 : 24
+            margins.left: Appearance.barEdges ? 12 : 24
             color: "transparent"
 
             readonly property int slideDuration: 350
@@ -89,7 +87,6 @@ Scope {
                     panel.WlrLayershell.layer = WlrLayer.Background
                     panel.WlrLayershell.keyboardFocus = WlrKeyboardFocus.None
                     panel.mask = null
-                    panelContent.currentPage = "main"
                 }
             }
 
@@ -136,9 +133,9 @@ Scope {
                 Item {
                     id: popupContainer
                     anchors.top: parent.top
-                    anchors.right: parent.right
+                    anchors.left: parent.left
                     width: content.width
-                    height: screen.height > 800 ? 720 : 640
+                    height: screen.height > 800 ? 980 : 640
 
                     MouseArea {
                         anchors.fill: parent
@@ -149,11 +146,11 @@ Scope {
                     PopupShape {
                         id: content
                         anchors.top: parent.top
-                        anchors.right: parent.right
+                        anchors.left: parent.left
 
 
-                        implicitWidth: 420
-                        implicitHeight: (sharedState.isOpen && shouldShow) ? screen.height > 800 ? 720 : 640 : 0
+                        implicitWidth: 460
+                        implicitHeight: (sharedState.isOpen && shouldShow) ? screen.height > 800 ? 980 : 640 : 0
 
                         style: 1
                         alignment: Appearance.barEdges ? 1 : 0
@@ -171,8 +168,8 @@ Scope {
 
                             anchors.fill: parent
                             // anchors.margins: 20
-                            anchors.leftMargin: Appearance.barEdges ? 20 : 16
-                            anchors.rightMargin: Appearance.barEdges ? 0 : 16
+                            anchors.rightMargin: Appearance.barEdges ? 20 : 16
+                            anchors.leftMargin: Appearance.barEdges ? 0 : 16
                             anchors.bottomMargin: Appearance.barEdges ? 32 : 4
                             // anchors.topMargin: 16
 

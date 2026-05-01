@@ -6,7 +6,7 @@ import qs.widgets
 
 Item {
     id: root
-    implicitWidth: 84
+    implicitWidth: 200
     implicitHeight: 32
     anchors.verticalCenter: parent.verticalCenter
 
@@ -16,7 +16,7 @@ Item {
         id: pillBg
         anchors.fill: parent
         radius: height / 2
-        color: Appearance.colors.cSurfaceContainer
+        color: mouse.containsMouse ? Appearance.colors.cPrimary : Appearance.colors.cSurfaceContainer
 
         Row {
             id: contentRow
@@ -24,16 +24,43 @@ Item {
             spacing: 6
 
             StyledText {
+                id: clockText
+                text: "󱐿"
+                color: mouse.containsMouse ? Appearance.colors.cOnPrimary : Appearance.colors.cPrimary
+                font.pixelSize: 14
+            }
+
+            StyledText {
                 id: dayText
                 text: Time.format("ddd")
-                color: Appearance.colors.cPrimary
+                color: mouse.containsMouse ? Appearance.colors.cOnPrimary : Appearance.colors.cPrimary
                 font.pixelSize: 14
             }
 
             StyledText {
                 id: timeText
                 text: Time.format("HH:mm")
-                color: Appearance.colors.cPrimary
+                color: mouse.containsMouse ? Appearance.colors.cOnPrimary : Appearance.colors.cPrimary
+                font.pixelSize: 14
+            }
+            StyledText {
+                id: bellText
+                text: "󰂚"
+                color: mouse.containsMouse ? Appearance.colors.cOnPrimary : Appearance.colors.cPrimary
+                font.pixelSize: 14
+            }
+            StyledText {
+                id: notifText
+                text: {
+                    if (NotifServer.unreadCount > 0 && NotifServer.unreadCount < 100) {
+                        return Math.min(99, NotifServer.unreadCount) + " unread"
+                    } else if (NotifServer.unreadCount > 99) {
+                        return "99+ unread"
+                    } else {
+                        return "no notifs"
+                    }
+                }
+                color: mouse.containsMouse ? Appearance.colors.cOnPrimary : Appearance.colors.cPrimary
                 font.pixelSize: 14
             }
         }
@@ -46,6 +73,16 @@ Item {
         onTriggered: {
             dayText.text = Time.format("ddd")
             timeText.text = Time.format("HH:mm")
+        }
+    }
+
+    MouseArea {
+        id: mouse
+        anchors.fill: parent
+        hoverEnabled: true
+
+        onClicked: {
+            Quickshell.execDetached(["qs", "ipc", "call", "notifpanel", "toggle"])
         }
     }
 }

@@ -29,7 +29,7 @@
 
   users.users.stan = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "input" ];
   };
 
   system.stateVersion = "25.11";

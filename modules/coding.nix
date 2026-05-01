@@ -11,8 +11,13 @@
       nixfmt
       gcc
       clang
+      wev
 
     ];
+    programs.ydotool = {
+      enable = true;
+      group = "input";
+    };
     # services.ollama = {
     #   enable = true;
     #   package = pkgs.ollama-cuda;

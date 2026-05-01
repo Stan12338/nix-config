@@ -64,7 +64,7 @@ Variants {
                 const currentIds = new Set()
 
                 for (let i = 0; i < currentPopups.length; i++) {
-                    const id = currentPopups[i].notification.id
+                    const id = currentPopups[i].notifId
                     currentIds.add(id)
 
                     if (!trackedIds[id]) {
@@ -191,13 +191,10 @@ Variants {
                                 }
 
                                 function startDismissAnimation() {
-                                    if (removing) {
+                                    if (removing) { 
                                         return
                                     }
-                                    // If not yet at target position, animate back to 400
-                                    if (slideOffset !== 400) {
-                                        slideOffset = 400
-                                    }
+                                    slideOffset = 400
                                     collapseTimer.start()
                                 }
                                 Timer {
@@ -398,7 +395,7 @@ Variants {
                                                                 cursorShape: Qt.PointingHandCursor
                                                                 onClicked: {
                                                                     modelData.invoke()
-                                                                    if (notifData) notifData.notification.dismiss()
+                                                                    if (notifData && notifData.liveNotif) notifData.liveNotif.dismiss()
                                                                     notifWrapper.startDismissAnimation()
                                                                 }
                                                             }
@@ -444,7 +441,7 @@ Variants {
                                                     hoverEnabled: true
                                                     cursorShape: Qt.PointingHandCursor
                                                     onClicked: {
-                                                        if (notifData) notifData.notification.dismiss()
+                                                        if (notifData && notifData.liveNotif) notifData.liveNotif.dismiss()
                                                         notifWrapper.startDismissAnimation()
                                                     }
                                                 }

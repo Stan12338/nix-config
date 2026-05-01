@@ -21,8 +21,8 @@
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/fastfetch");
       xdg.configFile."matugen".source = lib.mkDefault
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/matugen");
-      xdg.configFile."nvim".source = lib.mkDefault
-        (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/nvim");
+      # xdg.configFile."nvim".source = lib.mkDefault
+      #   (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/nvim");
       xdg.configFile."gtk-3.0".source = lib.mkDefault
         (config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dots/gtk-3.0");
       xdg.configFile."gtk-4.0".source = lib.mkDefault

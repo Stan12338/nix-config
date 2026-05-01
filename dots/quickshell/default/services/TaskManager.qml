@@ -7,7 +7,7 @@ import Quickshell.Wayland
 Singleton {
     id: root
     property var ignoredAppRegexes: []
-    property string dataFilePath: Quickshell.stateDir + "/taskbar_data.json"
+    property string dataFilePath: Quickshell.shellDir + "/generated/taskbar_data.json"
     property bool dataLoaded: false
     property var runtimeOrder: []
 

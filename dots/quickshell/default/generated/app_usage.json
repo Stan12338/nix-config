@@ -1,0 +1,89 @@
+{
+    "usage": {
+        "LocalSend": {
+            "count": 3,
+            "firstUsed": 1775385921728,
+            "lastUsed": 1777459455405
+        },
+        "Modrinth App": {
+            "count": 2,
+            "firstUsed": 1775447927254,
+            "lastUsed": 1775570488816
+        },
+        "brave-browser": {
+            "count": 6,
+            "firstUsed": 1775629559811,
+            "lastUsed": 1777265538581
+        },
+        "code": {
+            "count": 2,
+            "firstUsed": 1775379551928,
+            "lastUsed": 1775380928261
+        },
+        "com.github.johnfactotum.Foliate": {
+            "count": 1,
+            "firstUsed": 1775578571318,
+            "lastUsed": 1775578571318
+        },
+        "com.obsproject.Studio": {
+            "count": 1,
+            "firstUsed": 1776413107599,
+            "lastUsed": 1776413107599
+        },
+        "com.rtosta.zapzap": {
+            "count": 3,
+            "firstUsed": 1776164443734,
+            "lastUsed": 1777081671241
+        },
+        "dev.zed.Zed": {
+            "count": 15,
+            "firstUsed": 1775375334926,
+            "lastUsed": 1777627186938
+        },
+        "nemo": {
+            "count": 1,
+            "firstUsed": 1777238604572,
+            "lastUsed": 1777238604572
+        },
+        "org.godotengine.Godot4.6": {
+            "count": 2,
+            "firstUsed": 1777368904932,
+            "lastUsed": 1777369063456
+        },
+        "org.prismlauncher.PrismLauncher": {
+            "count": 32,
+            "firstUsed": 1775571023090,
+            "lastUsed": 1777024964657
+        },
+        "org.vinegarhq.Sober": {
+            "count": 30,
+            "firstUsed": 1775466542846,
+            "lastUsed": 1776923176764
+        },
+        "proton.vpn.app.gtk": {
+            "count": 7,
+            "firstUsed": 1775481396449,
+            "lastUsed": 1777204889288
+        },
+        "spotify": {
+            "count": 1,
+            "firstUsed": 1776413545037,
+            "lastUsed": 1776413545037
+        },
+        "steam": {
+            "count": 1,
+            "firstUsed": 1776946381409,
+            "lastUsed": 1776946381409
+        },
+        "systemsettings": {
+            "count": 1,
+            "firstUsed": 1775629593948,
+            "lastUsed": 1775629593948
+        },
+        "vesktop": {
+            "count": 8,
+            "firstUsed": 1775920665449,
+            "lastUsed": 1777179680208
+        }
+    }
+}

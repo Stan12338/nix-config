@@ -16,7 +16,7 @@ Rectangle {
         } else if (type === "screenshot") {
             return false
         } else if (type === "bar") {
-            return Appearance.barEdges
+            return Appearance.barType === "default"
         } else if (type === "windows") {
             return Appearance.fakedows
         }

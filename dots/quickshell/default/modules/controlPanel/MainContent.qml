@@ -415,8 +415,8 @@ Item {
                 CircleSlider {
                     Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                     size: 100
-                    value: (ResourceUsage.maxAvailableCpuString.replace("GHz", "").trim() * ResourceUsage.cpuUsage) / ResourceUsage.maxAvailableCpuString.replace("GHz", "").trim()
-                    centerText: Math.round((ResourceUsage.maxAvailableCpuString.replace("GHz", "").trim() * ResourceUsage.cpuUsage) * 10) / 10 + " GHz" //Math.round(ResourceUsage.cpuUsage * 100) + "%"
+                    value: ResourceUsage.cpuCurrentFreqGhz / parseFloat(ResourceUsage.maxAvailableCpuString)
+                    centerText: ResourceUsage.cpuCurrentFreqGhz.toFixed(1) + " GHz"
                     subText: "of " + ResourceUsage.maxAvailableCpuString
                 }
             }

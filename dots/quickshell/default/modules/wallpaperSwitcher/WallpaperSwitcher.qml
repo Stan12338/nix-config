@@ -424,6 +424,8 @@ Scope {
                                             if (wallpaperWindow.needsInitialization && count > 0) {
                                                 wallpaperWindow.needsInitialization = false
                                                 Qt.callLater(initializeSelection)
+                                            } else if (sharedState.isOpen && count > 0) {
+                                                Qt.callLater(initializeSelection)
                                             }
                                         }
 
@@ -447,14 +449,11 @@ Scope {
                                         }
 
                                         onCurrentIndexChanged: {
-                                            if (isInitializing) {
-                                                return
-                                            }
+                                            if (isInitializing) return
+                                            if (!sharedState.isOpen) return
 
-                                            // Only set wallpaper if not changed by mouse hover (to avoid spamming while browsing)
                                             if (!indexChangedByMouse && currentIndex >= 0 && currentIndex < count) {
                                                 var item = model.get(currentIndex, "fileUrl")
-                                                // Only trigger if it's actually different
                                                 if (item.toString() !== wallpaperWindow.activeWallpaper) {
                                                     wallpaperChangeTimer.pendingUrl = item
                                                     wallpaperChangeTimer.restart()
@@ -463,7 +462,6 @@ Scope {
 
                                             indexChangedByMouse = false
                                         }
-
                                         model: FolderListModel {
                                             id: folderModel
                                             folder: "file://" + wallpaperDir

@@ -1,0 +1,12 @@
+{
+    "config": {
+        "autoClearDays": 1,
+        "barBgEnabled": true,
+        "barType": "floating",
+        "fakedows": false,
+        "isDark": true,
+        "scheme": "scheme-vibrant",
+        "silent": false,
+        "wallpaper": "/home/stan/Pictures/Wallpapers/senku-rocket.jpg"
+    }
+}

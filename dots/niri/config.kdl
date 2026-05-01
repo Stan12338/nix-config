@@ -7,5 +7,5 @@ include "animations.kdl"
 include "outputs.kdl"
 include "startup.kdl"
 include "misc.kdl"
-
+include "gestures.kdl"
 

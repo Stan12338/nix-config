@@ -12,14 +12,14 @@
       vlc
       pavucontrol
       yt-dlp
+      foliate
     ];
     programs.mpv = {
       enable = true;
 
       config = {
-        vo = "gpu-next";
-        gpu-api = "vulkan";
-        gpu-context = "waylandvk";
+        vo = "gpu";
+        gpu-context = "wayland";
 
         video-sync = "display-resample";
 

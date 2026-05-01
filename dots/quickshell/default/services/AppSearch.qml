@@ -10,7 +10,7 @@ Item {
     property bool sloppySearch: false
     property real scoreThreshold: 0.2
 
-    property string usageFilePath: Quickshell.stateDir + "/app_usage.json"
+    property string usageFilePath: Quickshell.shellDir + "/generated/app_usage.json"
     property bool usageDataLoaded: false
 
     property alias usageData: jsonAdapter.usage

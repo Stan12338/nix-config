@@ -15,10 +15,12 @@ Singleton {
     property string scheme: "scheme-tonal-spot"
     property string wallpaper: ""
     property var colors: JSON.parse(colorsJsonFile.text()).colors[isDark ? "dark" : "light"]
-    property string configFilePath: Quickshell.stateDir + "/config.json"
+    property string configFilePath: Quickshell.shellDir + "/generated/config.json"
     property bool configDataLoaded: false
     property bool isUpdatingConfig: false
     property alias configData: configJsonAdapter.config
+    property int autoClearDays: 3
+
 
     property int lastMatugenTime: 0
     property int matugenCooldown: 100
@@ -85,6 +87,10 @@ Singleton {
                 root.silent = configJsonAdapter.config.silent
             }
 
+            if (configJsonAdapter.config.autoClearDays !== undefined) {
+                root.autoClearDays = configJsonAdapter.config.autoClearDays
+            }
+
             root.configDataLoaded = true
             isLoadingFromFile = false
         }
@@ -104,7 +110,8 @@ Singleton {
                 barType: "floating",
                 barBgEnabled: true,
                 fakedows: false,
-                silent: false
+                silent: false,
+                autoClearDays: 3
             })
         }
     }
@@ -117,6 +124,7 @@ Singleton {
     onBarBgEnabledChanged: if (readyToSave) saveConfig()
     onFakedowsChanged: if (readyToSave) saveConfig()
     onSilentChanged: if (readyToSave) saveConfig()
+    onAutoClearDaysChanged: if (readyToSave) saveConfig()
 
     onWallpaperChanged: {
         if (readyToSave && !isFromMatugenIPC && root.wallpaper !== configJsonAdapter.config.wallpaper) {
@@ -132,7 +140,8 @@ Singleton {
             barType: root.barType,
             barBgEnabled: root.barBgEnabled,
             fakedows: root.fakedows,
-            silent: root.silent
+            silent: root.silent,
+            autoClearDays: root.autoClearDays
         }
 
         configWriteTimer.restart()

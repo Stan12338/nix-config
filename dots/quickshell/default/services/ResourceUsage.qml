@@ -23,6 +23,8 @@ Singleton {
     property real cpuUsage: 0
     property var previousCpuStats
 
+    property real cpuCurrentFreqGhz: 0
+
     property string maxAvailableMemoryString: kbToGbString(ResourceUsage.memoryTotal)
     property string maxAvailableSwapString: kbToGbString(ResourceUsage.swapTotal)
     property string maxAvailableCpuString: "--"
@@ -70,6 +72,7 @@ Singleton {
             // Reload files
             fileMeminfo.reload()
             fileStat.reload()
+            cpuFreqProc.running = true
             cpuTempProc.running = true
 
             // Parse memory and swap usage
@@ -131,6 +134,17 @@ Singleton {
         stdout: StdioCollector {
             onStreamFinished: {
                 root.cpuTemp = parseInt(text) / 1000
+            }
+        }
+    }
+    Process {
+        id: cpuFreqProc
+        command: ["bash", "-c",
+            "cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq | awk '{sum += $1; count++} END {printf \"%.2f\", sum/count/1000000}'"
+        ]
+        stdout: StdioCollector {
+            onStreamFinished: {
+                root.cpuCurrentFreqGhz = parseFloat(text)
             }
         }
     }

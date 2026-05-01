@@ -9,15 +9,15 @@
   };
 
   config = lib.mkIf config.coding.enable {
-    programs.neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      withNodeJs = true;
-      withPython3 = true;
-      withRuby = false;
-    };
+    # programs.neovim = {
+    #   enable = true;
+    #   defaultEditor = true;
+    #   viAlias = true;
+    #   vimAlias = true;
+    #   withNodeJs = true;
+    #   withPython3 = true;
+    #   withRuby = false;
+    # };
 
     home.packages = with pkgs; [
       vscode
@@ -32,6 +32,7 @@
       python3
       python3Packages.pynvim
       lua-language-server
+      godot
     ];
     programs.git = {
       enable = true;

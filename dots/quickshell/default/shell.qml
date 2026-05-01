@@ -18,6 +18,9 @@ import qs.modules.powerMenu
 import qs.modules.settings
 import qs.modules.mpris
 import qs.modules.background
+import qs.modules.notificationPanel
+
+
 import qs.fakedows.modules.bar
 import qs.fakedows.modules.controlPanel
 import qs.fakedows.modules.startMenu
@@ -43,10 +46,16 @@ ShellRoot {
             ControlPanel {}
             PolkitWindow {}
             VolumeOsd {}
-            NotificationOsd {}
+
             PowerMenu {}
             MprisPanel {}
             Settings {}
+            LazyLoader {
+                loading: true
+                NotificationOsd {}
+                NotificationPanel {}
+            }
+
         }
 
     }

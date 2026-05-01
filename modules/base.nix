@@ -36,6 +36,7 @@
       xclip
       wtype
       libnotify
+      jdk21
 
     ];
     services.xserver.enable = true;
